@@ -1,7 +1,3 @@
-## Name: Edgar Martinez
-## Email: edgarmar@usc.edu
-## Source Code: lab4.cpp
-
 ## Compiling:
 
 I used the same source code file as in lab 3. I am using the -std=c++11 compiler option when I run my program, the reason that I am using this compiler option is due to the fact that I am using stoi() function to convert strings into integers when reading from the input file. I use the stoi() function call on lines (164-166, 172, 181).
