@@ -1,0 +1,77 @@
+// Name: Edgar Martinez 
+// Email: edgarmar@usc.edu
+
+This file contains information on the basics of using "gdb" bedugger. 
+
+````````````````````````````````````````````````````````````````````````````````
+Starting gdb:
+
+In order for you to be able to use "gdb" you must include the "-g" flag when compiling your program. To launch "gdb" simply type gdb name_of_executable.
+
+Example: 
+g++ -g example.cpp 
+gdb a.out
+
+To quit "gdb" simply type "quit". 
+
+````````````````````````````````````````````````````````````````````````````````
+Break:
+
+"gbd" dubugger is a useful tool because it lets you detect segmentation faults, memory errors, and program terminating problems. "gdb" allows you to stop the execution of your program at any arbritary point, through the use of "breakpoints".
+
+To use "breakpoints" simply use the "break" command. The break command requires a line number to be specified, so that "gdb" can stop execution of the program at the specified line number. 
+
+Syntax: 
+break line_number 
+
+Example:
+break 16
+
+If you no longer need a certian "breakpoint" you can simply remove it, or delete it. The syntax for deleting a breakpoint is shown below. 
+
+Syntax: 
+delete breakpoint_number
+
+Example:
+delete 1 
+// this will delete the first breakpoint you inserted 
+
+If you need a list of all the "breakpoints" in your program you can use the following command shown below: 
+
+Syntax: 
+info breakpoints
+
+````````````````````````````````````````````````````````````````````````````````
+
+Print:
+
+Once you hit a "breakpoint" you can use the "print" and "backtrace" commands. The "print" command will print the value of a given variable. This can be useful to keep track of the values of varibales throughout your program. 
+
+Syntax: 
+print variable_name
+
+Example:
+print x
+
+````````````````````````````````````````````````````````````````````````````````
+
+Backtrace:
+
+Backtrace or "bt" will print the stack trace; this will show you the functions that have been called up to the point of the crash. 
+
+````````````````````````````````````````````````````````````````````````````````
+
+Proceeding with execution: 
+
+To proceed with program execution there are three commands that you can use. The first is "continue", the second is "step", and the third is "next". The "continue" command or "c" command will run the program until it enconters the next breakpoint or the end of execution. 
+
+Syntax: 
+continue 
+// or c 
+
+The "step" command will step through the program line by line. 
+The "next" or "n" command will step through the program, but skip over function calls. Meaning that it will treat the function calls as one line of code instead of stepping through each line of the function call. 
+
+
+
+
